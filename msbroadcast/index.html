@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html lang=en>
+    <head>
+    <meta charset="utf-8"/>
+       <title>Multistream Broadcaster</title>
+       <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <header>
+    <h2>Multistream Broadcaster</h2>
+    </header>
+    <div id="wrapper"><br>
+    <button id="addS">Add Stream</button><br><br>
+    <div id="app">
+        <div class="kInput">
+          <select class="dest">
+            <option value="yt">YouTube</option>
+            <option value="fb">Facebook</option>
+            <option value="tw">Twitch</option>
+            <option value="pr">Periscope</option>
+          </select><br>
+          <label>Enter Stream Key</label>
+            <input type="text" class="s_key">
+        </div>
+        <div class="kInput">
+          <select class="dest">
+            <option value="yt">YouTube</option>
+            <option value="fb">Facebook</option>
+            <option value="tw">Twitch</option>
+            <option value="pr">Periscope</option>
+          </select><br>
+            <label>Enter Stream Key</label> 
+            <input type="text" class="s_key">
+        </div>
+    </div><br>
+    <button id="inject">Start Stream</button>
+    <button id="reject">End Stream</button>
+    </div>
+    <template id="tempd">
+        <div class="kInput">
+          <select class="dest">
+            <option value="yt">YouTube</option>
+            <option value="fb">Facebook</option>
+            <option value="tw">Twitch</option>
+            <option value="pr">Periscope</option>
+          </select><br> 
+          <label>Enter Stream Key</label>
+            <input type="text" class="s_key">
+            <button class="delButt">x</button>
+        </div>
+    </template>
+    </body>
+    <script src="main.js"></script>
+</html>
+

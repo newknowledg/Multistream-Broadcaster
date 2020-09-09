@@ -1,0 +1,32 @@
+
+header{
+    line-height: 20px;
+    margin: -8px;
+    padding: 5px;
+    background: linear-gradient(to right,turquoise,blue,navy);
+    position: relative;
+}
+h2{
+    right:40px;
+}
+body {
+    height:100vh;
+        background: linear-gradient(to bottom right, turquoise 10%,blue,navy);
+}
+#wrapper{
+    float:left;
+}
+
+.s_key{
+    background-color:beige;
+}
+
+button{
+    background:black;
+        color:white;
+}
+
+.dest{
+        background:black;
+        color:white;
+}
