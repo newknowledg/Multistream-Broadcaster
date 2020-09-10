@@ -16,8 +16,9 @@ if [ "$check" == "$ccheck" ]
     echo "wrote to nginx.conf"
 fi
 
-useradd -M -G msbroadcast msbroadcast
-echo  "%msbroadcast All=(ALL) NOPASSWD: /usr/bin/systemctl nginx restart" > /etc/sudoers.d/msbroadcast
+groupadd msbroadcast
+useradd -M -g msbroadcast msbroadcast
+echo  "%msbroadcast All=(ALL) NOPASSWD: /usr/bin/systemctl restart nginx" > /etc/sudoers.d/msbroadcast
 export receive=$(hostname -I| xargs)
 envsubst < msbroadcast/main.js > /var/www/msbroadcast/main.js
 
