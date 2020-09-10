@@ -18,7 +18,7 @@ fi
 
 groupadd msbroadcast
 useradd -M -g msbroadcast msbroadcast
-echo  "%msbroadcast All=(ALL) NOPASSWD: /usr/bin/systemctl restart nginx" > /etc/sudoers.d/msbroadcast
+echo  "%msbroadcast ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart nginx" > /etc/sudoers.d/msbroadcast
 export receive=$(hostname -I| xargs)
 envsubst < msbroadcast/main.js > /var/www/msbroadcast/main.js
 
