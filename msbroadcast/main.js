@@ -22,7 +22,7 @@ function emit(){
          }
          skey.push(tskey[i].value);
   }; 
-   fetch('http://127.0.0.1:4000/stream', { method: 'POST', headers:     {'content-type':'application/json'}, body: JSON.stringify(skey)})
+   fetch('http://${receive}:4000/stream', { method: 'POST', headers:     {'content-type':'application/json'}, body: JSON.stringify(skey)})
 }
   function addLoc(){
           var temp = document.getElementById("tempd").content;
@@ -36,7 +36,7 @@ function emit(){
   }
 function reneg(){
    var skey = []
-   fetch('http://127.0.0.1:4000/stream', { method: 'POST', headers:     {'content-type':'application/json'}, body: JSON.stringify(skey)})
+   fetch('http://${receive}:4000/stream', { method: 'POST', headers:     {'content-type':'application/json'}, body: JSON.stringify(skey)})
       
 }
 

@@ -16,11 +16,16 @@ if [ "$check" == "$ccheck" ]
     echo "wrote to nginx.conf"
 fi
 
+useradd -M -G msbroadcast msbroadcast
+echo  "%msbroadcast All=(ALL) NOPASSWD: /usr/bin/systemctl nginx restart" > /etc/sudoers.d/msbroadcast
+export receive=$(hostname -I| xargs)
+envsubst < msbroadcast/main.js > /var/www/msbroadcast/main.js
+
 cat  stunnel.tmp > /etc/stunnel/stunnel.conf
 cat appservice.tmp > /etc/systemd/system/msbroadcast.service
 cat site.tmp > /etc/nginx/sites-enabled/msbroadcast
 cd /var/www/msbroadcast/api
-chmod 666 Restream.conf
+chmod 0666 Restream.conf
 npm install
 systemctl start msbroadcast
 systemctl enable msbroadcast

@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 });
 
 app.post('/stream', (request, response) => {
-   const command = "sudo systemctl reload nginx"
+   const command = "sudo systemctl restart nginx"
    mod.rFile();
    for (var i = 0; i < request.body.length; i+=2){
        var j = i + 1 
